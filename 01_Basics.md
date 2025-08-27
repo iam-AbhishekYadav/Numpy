@@ -147,7 +147,7 @@ Here are some of the commonly used NumPy attributes:
 import numpy as np
 
 arr3 = np.array([[1,2,3],
-                [4,5,6.8]])
+                 [4,5,6]])
 
 print("Dimension", arr3.ndim)                                    # Output : Dimension of array : 2
 print("No. of elements", arr3.size)                              # Output : No. of elements : 6
