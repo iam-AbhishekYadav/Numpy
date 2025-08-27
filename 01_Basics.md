@@ -155,6 +155,35 @@ print("Data type of elements", arr3.dtype)                       # Output : Data
 print("Shape of array", arr3.shape)                              # Output : Shape of array : (2, 3)
 ```
 
+# # Array Reshaping
+
+**(i)** `reshape` ---> Gives a new shape to an array without changing its data.  
+**(ii)** `flattened` ---> Return a copy of the array collapsed into one dimension.  
+**(iii)** `ravel` --->  Return a view of the array collapsed into one dimension.  
+**(iv)** `transpose` ---> Swaps the axes of the given array.  
+
+``` py
+import numpy as np
+
+arr = np.arange(12)
+print("Original array", arr)                           # Output : Original array : [ 0  1  2  3  4  5  6  7  8  9 10 11]
+
+reshaped = arr.reshape((3,4))
+print("Reshaped array :",reshaped)                     # Output : Reshaped array : [[ 0  1  2  3]
+                                                       #                            [ 4  5  6  7]
+                                                       #                            [ 8  9 10 11]]
+flattened = reshaped.flatten()
+print("Flattened array :", flattened)                  # Output : Flattened array : [ 0  1  2  3  4  5  6  7  8  9 10 11]
+
+raveled = reshaped.ravel()
+print("Raveled array :", raveled)                      # Output : Raveled array : [ 0  1  2  3  4  5  6  7  8  9 10 11]
+
+transpose = reshaped.transpose()
+print("Transpose array :", transpose)                  # Output : Transpose array : [[ 0  4  8]
+                                                       #                             [ 1  5  9]
+                                                       #                             [ 2  6 10]
+                                                       #                             [ 3  7 11]]
+```
 
 
 
