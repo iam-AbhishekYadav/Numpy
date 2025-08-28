@@ -39,8 +39,14 @@ print("Entire column :", arr_2d[:,1])                    # Output : Entire row :
 ``` py
 import numpy as np
 
+# Basic Array Sorting
+
 unsorted = np.array([3,1,4,1,5,9,2,6])
 print("Sorted Array", np.sort(unsorted))                                               # Output : Sorted Array : [1 1 2 3 4 5 6 9]
+
+
+
+# 2D Array Sorting
 
 arr_2d = np.array([[3,1],
                     [1,2],
