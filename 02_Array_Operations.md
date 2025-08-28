@@ -49,8 +49,8 @@ print("Sorted Array", np.sort(unsorted))                                        
 # 2D Array Sorting
 
 arr_2d = np.array([[3,1],
-                    [1,2],
-                    [2,3]])
+                   [1,2],
+                   [2,3]])
 
 print("Sorted 2D Array by Column :", np.sort(arr_2d, axis=0))                          # Output : Sorted 2D Array by Column : [[1 1]
                                                                                        #                                       [2 2]
