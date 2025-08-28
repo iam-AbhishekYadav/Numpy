@@ -145,7 +145,7 @@ print("Conditional Array :",condition_array)                 # Output : Conditio
 
 ### What not to do 
 
-This will add the arrays 
+- This will add the arrays 
 
 ``` py
 import numpy as np
