@@ -137,7 +137,9 @@ condition_array = np.where(numbers > 5, numbers * 5, numbers)
 print("Conditional Array :",condition_array)                 # Output : Conditional Array : [ 1  2  3  4  5 30 35 40 45 50]
 ```
 
-# # Merging of Array
+# # Merging/Adding of Array
+
+## numpy.concatenate()
 
 - We acan combines multiple arrays into a single array along a specified axis by **`numpy.concatenate()`** function.
 - Join a sequence of arrays along an existing axis.
@@ -170,7 +172,6 @@ combine = np.concatenate((arr1, arr2))
 print("combined Array :",combine)                  # Output : Combined Array : [1 2 3 4 5 6]
 ```
 
-
 # # Array Compatibility
 
 - It checks the shape/Dimensions of the array are some or not
@@ -187,10 +188,70 @@ print("Compatibility Shape :",a.shape == c.shape)                  # Output : Co
 ```
 
 
+# # Stacking in Array
+
+- The process of joining multiple arrays along a new axis, thereby increasing the dimensionality of the resulting array.
+-  along a new axis, thereby increasing the dimensionality of the resulting array. This differs from concatenation, which joins arrays along an existing axis.
+-  All arrays being stacked must have the same shape (number of elements along each dimension) to ensure a valid stacking operation.
 
 
+## numpy.stack()
+
+- It takes a sequence of arrays and stacks them along the specified axis.
+- If axis=0 (default), arrays are stacked row-wise (vertically), adding a new dimension at the beginning
+-  If axis=1, arrays are stacked column-wise (horizontally), adding a new dimension at the second position.
 
 
+``` py
+import numpy as np
+
+arr1 = np.array([1,2,3,4])
+arr2 = np.array([5,6,7,8])
+
+new_array = np.stack((arr1,arr2),  axis = 0)              # Stack along rows
+new_array2 = np.stack((arr1,arr2), axis = 1)              # Stack along columns
+
+
+print("Axis = 0 : \n",new_array)                          # Output : Axis = 0 :
+                                                          #          [[1 2 3 4]
+                                                          #           [5 6 7 8]]
+
+print("Axis = 1 : \n",new_array2)                         # Output : Axis = 1 :
+                                                          #          [[1 5]
+                                                          #           [3 7]
+                                                          #           [4 8]]
+
+```
+
+## numpy.vstack() , numpy.hstack() & numpy,dstack()
+
+- **`numpy.vstack()`** ---> Vertical stacking (stacking along rows). 
+- **`numpy.hstack()`** ---> Horizontal stacking (stacking along columns).
+- **`numpy.dstack()`** ---> Stacks arrays along the third-axis/height (depth).
+
+``` py
+import numpy as np
+
+arr1 = np.array([1,2,3,4])
+arr2 = np.array([5,6,7,8])
+
+new_array2 = np.vstack((arr1,arr2))
+new_array = np.hstack((arr1,arr2))
+new_array3 = np.dstack((arr1,arr2))
+
+
+print("Vstack Array : \n",new_array)                           # Output : Vstack Array : [1 2 3 4 5 6 7 8]
+
+print("Hstack Array : \n",new_array2)                          # Output : Hstack Array :
+                                                               #           [[1 2 3 4]
+                                                               #            [5 6 7 8]]
+
+print("Dstack Array : \n",new_array3)                          # Output : Dstack Array :
+                                                               #           [[[1 5]
+                                                               #             [2 6]
+                                                               #             [3 7]
+                                                               #             [4 8]]]
+```
 
 
 
