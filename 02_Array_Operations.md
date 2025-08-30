@@ -253,7 +253,34 @@ print("Dstack Array : \n",new_array3)                          # Output : Dstack
                                                                #             [4 8]]]
 ```
 
+# # Deletion in Array
 
+- Return a new array with sub-arrays along an axis deleted.
+- For a one dimensional array, this returns those entries not returned by arr[obj].
+
+``` py
+import numpy as np
+
+
+arr = np.array([[1,2,3,4],
+                [5,6,7,8],
+                [9,10,11,12]])
+
+deleted1 = np.delete(arr, 0, 0)
+deleted2 = np.delete(arr, 0, 1)
+deleted3 = np.delete(arr, [2,10])
+
+print("Deletion of Row :\n", deleted1)                               # Output : Deletion of Row :
+                                                                     #           [[ 5  6  7  8]
+                                                                     #            [ 9 10 11 12]]
+
+print("Deletion of Column :\n", deleted2)                            # Output : Deletion of Column :
+                                                                     #           [[ 2  3  4]
+                                                                     #            [ 6  7  8]
+                                                                     #            [10 11 12]]
+
+print("Deletion of Indices :\n", deleted3)                           # Output : Deletion of Indices :
+                                                                     #          [ 1  2  4  5  6  7  8  9 10 12]
 
 
 
